@@ -1,3 +1,6 @@
+import './ExpenseDate.css'
+import Card from './Card'
+
 const ExpenseDate = (data) => {
 
     const month = data.date.toLocaleString('en-US',{month: 'long'});
@@ -5,11 +8,11 @@ const ExpenseDate = (data) => {
     const year = data.date.getFullYear();
 
     return(
-        <div>
-            <div>{month}</div>
-            <div>{day}</div>
-            <div>{year}</div>
-        </div>
+        <Card className='expense-date'>
+            <div className='expense-date__month'>{month}</div>
+            <div className='expense-date__day'>{day}</div>
+            <div className='expense-date__year'>{year}</div>
+        </Card>
     )
 }
 
